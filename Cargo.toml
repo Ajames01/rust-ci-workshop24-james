@@ -1,0 +1,7 @@
+[package]
+name = "rust-ci-workshop24-james"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A simple project to demonstrate GitHub Settings and CI/CD6"
+[dependencies]
