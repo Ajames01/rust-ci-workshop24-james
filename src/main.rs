@@ -39,7 +39,7 @@ impl Inventory {
 
         for (index, item) in sorted_items.iter().enumerate() {
             println!(
-                "{}. {} - Quantity: {}, Price: ${:.2}",
+                "{}. {} - Quantity: {}, Price: ₦{:.2}",
                 index + 1,
                 item.name,
                 item.quantity,
@@ -60,7 +60,7 @@ impl Inventory {
                 if item.quantity >= quantity {
                     item.quantity -= quantity;
                     println!(
-                        "Purchased {} x {} - Total: ${:.2}",
+                        "Purchased {} x {} - Total: ₦{:.2}",
                         quantity,
                         item.name,
                         item.price * quantity as f32
@@ -93,7 +93,7 @@ impl Inventory {
         println!("Inventory Report:");
         for item in self.items.values() {
             println!(
-                "{} - Quantity: {}, Price: ${:.2}",
+                "{} - Quantity: {}, Price: ₦{:.2}",
                 item.name, item.quantity, item.price
             );
         }
@@ -110,11 +110,11 @@ fn parse_input(input: &str) -> Result<i32, &str> {
 fn main() {
     let mut inventory = Inventory::new();
 
-    inventory.add_item("Biscuit".to_string(), 5, 1500.0);
+    inventory.add_item("Biscuit".to_string(), 30, 1500.0);
     inventory.add_item("Burger".to_string(), 10, 7500.0);
-    inventory.add_item("Pizza".to_string(), 3, 13000.0);
-    inventory.add_item("Shawarma".to_string(), 3, 2500.0);
-    inventory.add_item("Jellof Rice".to_string(), 3, 3000.0);
+    inventory.add_item("Pizza".to_string(), 15, 13000.0);
+    inventory.add_item("Shawarma".to_string(), 25, 2500.0);
+    inventory.add_item("Jellof Rice".to_string(), 20, 3000.0);
 
     loop {
         println!("\nMenu:");
@@ -202,3 +202,4 @@ fn main() {
         }
     }
 }
+
